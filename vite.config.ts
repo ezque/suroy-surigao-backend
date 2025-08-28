@@ -16,8 +16,10 @@ export default defineConfig(({ mode }) => {
             tailwindcss(),
         ],
         server: {
+            host: 'suroy.surigao.com',
+            port: 5173,
             cors: {
-                origin: ['*', env.VITE_APP_URL || 'http://127.0.0.1:8000'],
+                origin: ['*', env.VITE_APP_URL || 'http://127.0.0.1:8000', 'http://suroy.surigao.com'],
                 methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
                 allowedHeaders: ['Content-Type', 'Authorization'],
                 credentials: true

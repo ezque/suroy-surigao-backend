@@ -1,7 +1,7 @@
 <template>
     <div class="login-container">
         <div class="left-container">
-
+            <h2>Login hasdhs</h2>
         </div>
         <div class="right-container">
 
