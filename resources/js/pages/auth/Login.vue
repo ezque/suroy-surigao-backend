@@ -1,11 +1,23 @@
 <template>
-    <h2>Login</h2>
+    <div class="login-container">
+        <div class="left-container">
+
+        </div>
+        <div class="right-container">
+
+        </div>
+    </div>
 </template>
 <script setup lang="ts">
     //
 </script>
 <style scoped>
-
+    .login-container {
+        width: 100%;
+        height: 100vh;
+        overflow: hidden;
+        background: linear-gradient(to bottom, #6ABBE4, #EEF8F9);
+    }
 </style>
 
 
