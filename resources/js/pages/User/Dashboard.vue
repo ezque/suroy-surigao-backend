@@ -1,6 +1,6 @@
 <template>
     <div>
-        <h2>Admin Dashboard</h2>
+        <h2>User Dashboard</h2>
         <button @click="handleLogout">Logout</button>
     </div>
 </template>

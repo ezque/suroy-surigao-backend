@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\UserController;
 
 
 Route::get('/', [AuthController::class, 'login'])->name('login');
@@ -11,17 +12,8 @@ Route::post('/register', [AuthController::class, 'registerPost'])->name('registe
 
 Route::middleware(['auth:sanctum'])->group(function () {
     Route::get('/admin-dashboard', [AdminController::class, 'adminDashboard'])->name('admin.dashboard');
+    Route::get('/user-dashboard', [UserController::class, 'userDashboard'])->name('user.dashboard');
+
+    Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 });
 
-
-//Route::get('/', function () {
-//    return Inertia::render('Welcome');
-//})->name('home');
-//
-//
-//Route::get('dashboard', function () {
-//    return Inertia::render('Dashboard');
-//})->middleware(['auth', 'verified'])->name('dashboard');
-//
-//require __DIR__.'/settings.php';
-//require __DIR__.'/auth.php';
